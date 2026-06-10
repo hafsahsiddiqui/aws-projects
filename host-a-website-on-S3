@@ -1,0 +1,54 @@
+Project overview
+In this project, I will demonstrate how to use S3 to host a website. I'm doing this project to learn about AWS and cloud services and how they can be used to host websites
+Tools and concepts
+Services I used were Amazon S3. Key concepts I learnt include bucket policies, uploading static website files, index.html, bucket endpoint URLs, and ACLs and how they control access to our bucket's objects.
+Time, challenges, and wins
+This project took me approximately a couple of hours. The most challenging part was trying to under the concepts of what I am doing as I go. It was most rewarding to see the website actually works and not get stuck anywhere. 
+
+How I Set Up an S3 Bucket
+What I did in this step
+In this step, I will open S3 to make a storage space to sort all the website files
+How long it took to create the bucket
+Creating an S3 bucket took me 30 minutes because I kept making sure I clicked the right things and why we are clicking them
+Region selection
+The Region I picked for my S3 bucket was ohio because it's closest to Houston, Texas. It's good to pick one closest to you because it lowest time to get to latency
+Understanding bucket name uniqueness
+S3 bucket names are globally unique! This means no S3 bucket can have the same name. They have to be completely unique like an ID
+
+Upload Website Files to S3
+What I did in this step
+In this step, I will upload files into the bucket because otherwise there is no website
+Files I uploaded
+I uploaded two files to my S3 bucket index.html (this determines the structure of what goes inside our website) and a folder of images assets (they will fill the website with things to look at)
+How the files work together
+Both files are necessary for this project as the index.html determines the structure and we can't say "add image" without a file of images
+
+Static Website Hosting on S3
+What I did in this step
+In this step, I will turn my website into something that can be shared with the world because if I don't it will just be files
+Understanding website hosting
+Website hosting means putting website files into a web server that turn files into web pages
+How I enabled website hosting
+To enable website hosting with my S3 bucket, I went to Properties tab and down to the Static website hosting panel. I then enabled it to host a static website.
+Access Control Lists (ACLs)
+An ACL is a set of rules that decides who can get access to a resource
+
+Bucket Endpoints
+Understanding bucket endpoint URLs
+Once static website is enabled, S3 produces a bucket endpoint URL, which is a URL that takes you (and anyone on the internet) to the website that you are hosting.
+What I saw when I tested the endpoint
+When I first visited the bucket endpoint URL, I saw an 403 error message. The reason for this error was that the objects in the bucket are public by default - even though we have switched off "Block all public access", the website files themselves are still completely private. We need to manage their access settings separately - they need to be public files too for the public to see the content
+
+What I did in this step
+In this step, I will make the website files in S3 publicly accessible because I want to let everyone see it
+How I resolved the 403 error
+To resolve this 403 Forbidden error, I updated the access setting of the files inside the bucket too. Using ACLs , we made our bucket's files public! Once we checked our S3 bucket endpoint, we can see all the stuff on the website.
+
+Bucket Policies
+What I did in this extension
+In this project extension I'm about to use bucket policies to control access to our bucket's files. I'm doing this so that we can stop people from deleting index.html file.
+Understanding bucket policies
+An alternative to ACLs are bucket policies, which are rules that determine who is allowed (and who is not) to do something. The benefit of using bucket policies is that you can have greater control of the ACTIONS that people are /aren't allowed to do while ACLs are useful for controlling public access to individual objects inside the bucket.
+
+What my bucket policy does
+My bucket policy denied everyone the ability to delete the index.html file in the bucket. I tested this by trying to delete the file and saw a permission denied error.
