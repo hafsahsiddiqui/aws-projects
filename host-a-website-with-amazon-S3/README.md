@@ -31,6 +31,8 @@ This project took approximately **2 hours** to complete. The biggest challenge w
 
 **Note on naming:** S3 bucket names are **globally unique** — no two buckets across all of AWS can share the same name, similar to a domain name.
 
+<img width="2940" height="1912" alt="aws-host-a-website-on-s3_ba6d42ad" src="https://github.com/user-attachments/assets/8fd466dd-c648-4c02-b51d-881e609f137d" />
+
 ---
 
 ## Step 2: Upload Website Files to S3
@@ -43,6 +45,8 @@ This project took approximately **2 hours** to complete. The biggest challenge w
 
 **Why both matter:** The HTML defines the page structure, while the assets folder supplies the images referenced within it. Neither works as a complete website without the other.
 
+<img width="2940" height="1912" alt="aws-host-a-website-on-s3_a265af88" src="https://github.com/user-attachments/assets/dbd26416-9a0e-4f19-8781-59b89a09b4eb" />
+
 ---
 
 ## Step 3: Enable Static Website Hosting
@@ -54,6 +58,8 @@ This project took approximately **2 hours** to complete. The biggest challenge w
 **How I enabled it:** Navigated to the **Properties** tab → **Static website hosting** panel → enabled hosting and set `index.html` as the index document.
 
 **Access Control Lists (ACLs):** An ACL is a permission set that determines who can access a given resource (in this case, individual objects in the bucket).
+
+<img width="2940" height="1912" alt="aws-host-a-website-on-s3_c22c54c0" src="https://github.com/user-attachments/assets/3f4d9965-6381-4926-a91c-e78014dfacd1" />
 
 ---
 
