@@ -65,6 +65,10 @@ This project took approximately **2 hours** to complete. The biggest challenge w
 
 **How I fixed it:** I updated the ACLs on the objects inside the bucket to make them publicly readable. After doing this, refreshing the endpoint URL successfully displayed the website.
 
+
+<img width="2940" height="1912" alt="aws-host-a-website-on-s3_5d4474f9" src="https://github.com/user-attachments/assets/b9d96972-17e3-49c6-b324-fbbc3f47abe5" />
+
+
 ---
 
 ## Extension: Bucket Policies
