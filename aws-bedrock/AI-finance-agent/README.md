@@ -21,11 +21,17 @@ In this step, I navigated to AWS Bedrock, since we're working with Bedrock Agent
 
 **Discovering Bedrock Agents:** A Bedrock Agent is an AI that can execute tasks based on a foundation model. Unlike a chatbot, it can reason through and execute programmatic tasks.
 
+<img width="2940" height="1912" alt="aws-genai-bedrock-agent_h4t7y1a5" src="https://github.com/user-attachments/assets/3b119932-f44c-4188-958c-1dd68b57a0db" />
+
+
 ## Step 2: Creating the AI Finance Agent
 
 In this step, I created an Amazon Bedrock Agent to act as a personal financial advisor, and enabled it to write and execute Python code.
 
 **Crafting the agent instructions:** I wrote instructions telling the agent to analyze spending data. This matters because the instructions are what the agent bases all of its responses on.
+
+<img width="2940" height="1912" alt="aws-genai-bedrock-agent_q4j6r2m8" src="https://github.com/user-attachments/assets/be124d1b-5d10-40b5-9b46-8829c500ca85" />
+
 
 ## Step 3: Analyzing Spending Data with Code Interpreter
 
@@ -35,6 +41,9 @@ In this step, I uploaded a transactions file and got a spending summary from my 
 
 **Iterating on agent instructions with traces:** I updated the instructions to request a percentage breakdown. The output improved, showing a table with costs displayed to two decimal places along with a percentage breakdown per category.
 
+<img width="2940" height="1912" alt="aws-genai-bedrock-agent_p4r7t9v1" src="https://github.com/user-attachments/assets/46bc8d1e-e598-4471-a281-6fee6a7d972a" />
+
+
 ## Extension: Enabling Cross-Session Agent Memory
 
 In this extension, I enabled memory for my Bedrock Agent. Cross-session memory matters because users might want to ask about content they worked on in a previous session.
@@ -42,6 +51,8 @@ In this extension, I enabled memory for my Bedrock Agent. Cross-session memory m
 **Session summarization vs. full history:** I configured the agent to enable memory. Summarization is useful here because you don't want to pass the entire chat history to the model on every request.
 
 **Testing cross-session recall:** I tested the memory feature, and the agent successfully recalled all three suggestions it had given me in an earlier session.
+
+<img width="2940" height="1912" alt="aws-genai-bedrock-agent_t8h1g5f3" src="https://github.com/user-attachments/assets/728f62c7-6df7-4797-b60e-83ae8812fd8e" />
 
 ---
 
