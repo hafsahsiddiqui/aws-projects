@@ -14,9 +14,15 @@ In this step, I created a classifier prompt in Prompt Management that categorize
 
 **How the classifier works:** When I tested the classifier, it correctly output `question` and `complaint` for different sample emails. The exact lowercase format matters because later steps in the flow rely on an exact string match.
 
+<img width="2940" height="1912" alt="aws-genai-bedrock-flows_x9m3t6k1" src="https://github.com/user-attachments/assets/46dd5c76-1d18-4d2a-a9ec-7373a942a5bb" />
+
+
 ## Step 3: Building the Response Prompt Library
 
 In this step, I created a complaint response prompt with an empathetic tone. Separate prompts are needed because different situations require different tones.
+
+<img width="2940" height="1912" alt="aws-genai-bedrock-flows_y2j8b4w6" src="https://github.com/user-attachments/assets/377aa74c-b6f3-4563-9470-4a912774d19a" />
+
 
 ## Step 4: Building the Email Router Flow
 
@@ -26,6 +32,9 @@ In this step, I built a Bedrock Flow using the email classifier prompt, and adde
 
 **Completing the flow architecture:** The flow connects the Flow input node to the EmailClassifier prompt, which categorizes the email as a complaint, question, or refund. The classifier output feeds into the ComplaintChecker condition node, which routes to the ComplaintResponsePrompt if the email is a complaint, or to the GeneralResponsePrompt if it isn't. The Flow input is also connected directly to both response prompts so they have the full email text, and each prompt then connects to its own Flow output node to return the final response.
 
+<img width="2940" height="1912" alt="aws-genai-bedrock-flows_a5d3g7k1" src="https://github.com/user-attachments/assets/254f7b4c-3cce-4bc3-882d-1cf886ac6684" />
+
+
 ## Step 5: Testing and Debugging the Flow
 
 In this step, I tested that the flow works correctly for both complaint emails and generic emails, using the trace viewer to debug the flow.
@@ -34,11 +43,16 @@ In this step, I tested that the flow works correctly for both complaint emails a
 
 **How default routing works:** A question email reaches the general response branch, since it isn't classified as a complaint.
 
+<img width="2940" height="1912" alt="aws-genai-bedrock-flows_v6b1c8f4" src="https://github.com/user-attachments/assets/b92f333d-78eb-44d2-b631-83383e0e0360" />
+
+
 ## Extension: Adding Content Safety with Guardrails
 
 **Configuring content filters:** I enabled filters for harmful content. Filtering matters because we don't want the system to engage in harmful or dangerous interactions.
 
 **Normal vs. harmful email behavior:** I sent a normal email, and it went through the flow as usual. Then I sent a harmful email — the guardrail caught it and categorized it as "unable to process," rather than classifying it as a complaint, question, or refund.
+
+<img width="2940" height="1912" alt="aws-genai-bedrock-flows_w3bp5n1f" src="https://github.com/user-attachments/assets/1567af10-f6a8-47d1-9486-d5f178ac02ad" />
 
 ---
 
