@@ -107,6 +107,8 @@ mysql -h <aurora-endpoint> -u <username> -p
 
 Then query the relevant table to verify the entries match what was submitted through the form.
 
+<img width="2940" height="1912" alt="aws-databases-webapp_1409z22b" src="https://github.com/user-attachments/assets/ce235913-8493-4819-bf62-0e2ab8c9ecf2" />
+
 ---
 
 ## Lessons Learned
