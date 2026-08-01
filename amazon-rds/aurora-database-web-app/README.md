@@ -59,8 +59,12 @@ Create a new EC2 instance to host the web app.
 
   These are needed to access the instance and confirm you have the right permissions later.
 
+  <img width="627" height="937" alt="aws-databases-aurora_91b9fd1g" src="https://github.com/user-attachments/assets/f8d095e1-d933-4ead-80fe-cebe0f7f205b" />
+
 ### Step 5 — Finish setting up the Aurora database
 Return to the Aurora setup and complete the configuration, now that the EC2 instance exists and can be linked to the cluster.
+
+<img width="1548" height="435" alt="aws-databases-aurora_1fddb0b5" src="https://github.com/user-attachments/assets/87d7369d-7636-4009-8a8c-c357d0fb975b" />
 
 ---
 
