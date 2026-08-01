@@ -92,8 +92,14 @@ nano dbinfo.inc
 
 Add the database endpoint, username, and password here so the web app can authenticate against Aurora.
 
+<img width="867" height="343" alt="aws-databases-webapp_b7999168" src="https://github.com/user-attachments/assets/9c46e9c3-5e7c-4f92-99d6-6099de96a1ae" />
+<img width="2940" height="1912" alt="aws-databases-webapp_1709b25b" src="https://github.com/user-attachments/assets/e8a53a3d-7cca-40bd-9b31-96da484fc082" />
+
+
 ### Step 4 — Build the web app page
 Upgrade the web app by adding a `SamplePage` (a PHP file) that includes a header and a form for entering data.
+
+<img width="2940" height="1912" alt="aws-databases-webapp_2709b25b" src="https://github.com/user-attachments/assets/6c3030dd-5a88-47cf-a751-1da503d6fed1" />
 
 ---
 
