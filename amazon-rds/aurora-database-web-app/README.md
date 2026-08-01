@@ -97,7 +97,7 @@ Upgrade the web app by adding a `SamplePage` (a PHP file) that includes a header
 
 ---
 
-## Testing the Web App
+## Part 3: Testing the Web App
 
 Use the **MySQL CLI** to connect to the Aurora database directly and confirm that all the data entered through the web app was successfully stored:
 
